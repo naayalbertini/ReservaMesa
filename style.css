@@ -178,5 +178,12 @@ body {
     cursor: pointer;
     background-color: #0062cc;
   }
+
+  .floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
   
   
