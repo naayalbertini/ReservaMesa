@@ -9,7 +9,7 @@ function sendWhatsApp() {
 
     const mensagem = `Olá, meu nome é ${nomeCliente}.|| Gostaria de reservar as mesas de número: ${numMesas}...|| Adicionei outra mesa: ${numMesaAdicional}. || Essa(s) mesa(s) é em nome do aluno: ${nomeAluno}... || Turma/Ano: ${turmaAluno}... || Acionei uma cadeira: ${nomeCadeira}...|| Me informe o valor total e o PIX?`;
   
-    const whatsappLink = `https://api.whatsapp.com/send?phone=SEUNUMERO&text=${encodeURIComponent(mensagem)}`;
+    const whatsappLink = `https://api.whatsapp.com/send?phone=7199183320&text=${encodeURIComponent(mensagem)}`;
   
     window.location.href = whatsappLink;
   }
