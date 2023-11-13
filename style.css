@@ -18,14 +18,14 @@ header h1 {
   margin: 0;
   font-size: 3rem;
   font-weight: bold;
-  color: #fff; /* Texto branco */
+  color: #fff;
 }
 
 header p {
   margin: 0;
   font-size: 1.2rem;
   font-style: italic;
-  color: #fff; /* Texto branco */
+  color: #fff;
 }
 
 /* Estilos do formulário */
@@ -38,7 +38,7 @@ form {
 }
 
 .form-group {
-  margin-bottom: 1.5rem; /* Um pouco mais de espaço entre os grupos */
+  margin-bottom: 1.5rem;
 }
 
 label {
@@ -46,12 +46,12 @@ label {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #333; /* Cor do texto padrão */
+  color: #333;
 }
 
 input[type="text"],
 input[type="number"] {
-  padding: 0.8rem; /* Aumento do preenchimento para melhor usabilidade */
+  padding: 0.8rem;
   border-radius: 0.25rem;
   border: 1px solid #ccc;
   font-size: 1.2rem;
@@ -60,9 +60,9 @@ input[type="number"] {
 
 input[type="submit"],
 button {
-  background-color: #e3c32c; /* Amarelo */
+  background-color: #e3c32c;
   color: #333;
-  padding: 0.8rem 1.5rem; /* Ajuste do preenchimento */
+  padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 0.25rem;
   font-size: 1.2rem;
@@ -72,7 +72,7 @@ button {
 
 input[type="submit"]:hover,
 button:hover {
-  background-color: #d0b027; /* Amarelo escuro no hover */
+  background-color: #d0b027;
 }
 
 .attention-message {
@@ -81,8 +81,6 @@ button:hover {
   margin-top: 0.5rem;
   color: #777;
 }
-
-/* ... Outros estilos do formulário continuam ... */
 
 /* Estilos do rodapé */
 footer {
@@ -100,15 +98,17 @@ footer p {
 
 /* Estilos para dispositivos móveis */
 @media (max-width: 767px) {
-  /* ... Estilos para dispositivos móveis permanecem os mesmos ... */
+  body {
+    font-size: 14px;
+  }
+
+  /* Adicione estilos específicos para dispositivos móveis aqui */
 }
 
 .logo {
   width: 220px;
   height: 220px;
 }
-
-/* ... Outros estilos específicos continuam ... */
 
 /* Estilo do botão de ajuda */
 .botao-ajuda {
