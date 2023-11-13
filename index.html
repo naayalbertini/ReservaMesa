@@ -8,12 +8,11 @@
   </head>
   <body>
     <header>
-      <h1>Traços Culturais.</h1>
-      <img class="logo" src="img/2-removebg-preview.png" alt="Logo 1">
-      <img class="logo" src="img/1-removebg-preview.png" alt="Logo 2">
+      <h1>NOITE DE LUZES E CORES.</h1>
+      <img class="logo" src="img/Main Logo (1).png" alt="Logo 1">
       <p><b>Faça sua reserva agora!</b></p>
       <p><b>ATENÇÃO: ROLE A TELA PARA BAIXO E VEJA AS MESAS DISPONÍVEIS.</b></p>
-      <p><b>Valores das mesas: R$ 90,00 cada. Cadeiras Adicionais R$ 8,00 </b></p>
+      <p><b>Valores das mesas: R$ 95,00 cada. Cadeiras Adicionais R$ 10,00 </b></p>
     </header>
     <main>
       <form>
@@ -42,10 +41,9 @@
         </div>
 
         <div class="form-group">
-          <label for="cadeira">Deseja adicionar uma cadeira?</label>
-          <p><b>ATENÇÃO: Só pode ser adicionado uma cadeira extra, responda SIM OU NÃO</b></p>
-          <input type="text" id="cadeira" name="cadeira" min="1" required>
-        </div>
+          <label for="cadeira">Deseja adicionar cadeira? (Responda com 0, 1 ou 2)</label>
+          <p><b>ATENÇÃO: Pode ser adicionado até duas cadeiras extras, responda 0 para nenhuma cadeira, 1 para uma cadeira ou 2 para duas cadeiras.</b></p>
+          <input type="number" id="cadeira" name="cadeira" min="0" max="2" required>
         </div>
         <button type="submit">Reservar</button>
       </form>
