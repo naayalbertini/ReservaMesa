@@ -16,14 +16,14 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 3rem;
+  font-size: 2rem; /* Reduzindo o tamanho da fonte para dispositivos móveis */
   font-weight: bold;
   color: #fff;
 }
 
 header p {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reduzindo o tamanho da fonte para dispositivos móveis */
   font-style: italic;
   color: #fff;
 }
@@ -43,7 +43,7 @@ form {
 
 label {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reduzindo o tamanho da fonte para dispositivos móveis */
   font-weight: bold;
   margin-bottom: 0.5rem;
   color: #333;
@@ -54,7 +54,7 @@ input[type="number"] {
   padding: 0.8rem;
   border-radius: 0.25rem;
   border: 1px solid #ccc;
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reduzindo o tamanho da fonte para dispositivos móveis */
   width: 100%;
 }
 
@@ -65,7 +65,7 @@ button {
   padding: 0.8rem 1.5rem;
   border: none;
   border-radius: 0.25rem;
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reduzindo o tamanho da fonte para dispositivos móveis */
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -77,7 +77,7 @@ button:hover {
 
 .attention-message {
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 0.9rem; /* Reduzindo o tamanho da fonte para dispositivos móveis */
   margin-top: 0.5rem;
   color: #777;
 }
@@ -93,21 +93,46 @@ footer {
 
 footer p {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reduzindo o tamanho da fonte para dispositivos móveis */
 }
 
 /* Estilos para dispositivos móveis */
 @media (max-width: 767px) {
-  body {
-    font-size: 14px;
+  header h1 {
+    font-size: 1.5rem;
   }
 
-  /* Adicione estilos específicos para dispositivos móveis aqui */
+  header p {
+    font-size: 0.8rem;
+  }
+
+  label {
+    font-size: 0.8rem;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    font-size: 0.8rem;
+  }
+
+  input[type="submit"],
+  button {
+    font-size: 0.8rem;
+  }
+
+  .attention-message {
+    font-size: 0.7rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
 }
 
 .logo {
-  width: 220px;
-  height: 220px;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
 }
 
 /* Estilo do botão de ajuda */
