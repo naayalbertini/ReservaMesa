@@ -12,7 +12,7 @@ body {
 
 /* Estilos do header */
 header {
-  background-color: #26f71e;
+  background-color: #340063;
   padding: 1rem;
   text-align: center;
   color: #fff;
@@ -21,6 +21,7 @@ header {
 header h1 {
   font-size: 2rem;
   font-weight: bold;
+  color: #ffffff; /* Cor de destaque para o texto branco */
 }
 
 header p {
@@ -132,7 +133,7 @@ footer p {
 .map-container {
   position: relative;
   overflow: hidden;
-  padding-top: 80.25%; /* Proporção para manter o aspect ratio (16:9) */
+  padding-top: 56.25%; /* Proporção para manter o aspect ratio (16:9) */
 }
 
 .map-container iframe {
