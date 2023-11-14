@@ -7,7 +7,7 @@ function sendWhatsApp() {
     const numMesaAdicional = document.getElementById("mesaAdicional").value;
     const nomeCadeira = document.getElementById("cadeira").value;
 
-    const mensagem = `Olá, meu nome é ${nomeCliente}.|| Gostaria de reservar as mesas de número: ${numMesas}...|| Adicionei outra mesa: ${numMesaAdicional}. || Essa(s) mesa(s) é em nome do aluno: ${nomeAluno}... || Turma/Ano: ${turmaAluno}... || Cadeira Adicional: ${nomeCadeira}...|| Me informe o valor total e o PIX?`;
+    const mensagem = `Olá, meu nome é ${nomeCliente}.|| Gostaria de reservar a mesa de número: ${numMesas}...|| Adicionei outra mesa: ${numMesaAdicional}. || Essa(s) mesa(s) é em nome do aluno: ${nomeAluno}... || Turma/Ano: ${turmaAluno}... || Cadeira Adicional: ${nomeCadeira}...|| Me informe o valor total e o PIX?`;
   
     const whatsappLink = `https://api.whatsapp.com/send?phone=7199183320&text=${encodeURIComponent(mensagem)}`;
   
