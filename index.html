@@ -1,64 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <link rel="icon" href="img/WhatsApp-Image-2023-11-08-at-15.33.03-_1_.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="img/WhatsApp-Image-2023-11-08-at-15.33.03-_1_.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Reserva de Mesa Traços</title>
+    <script>
+      // Função para verificar o horário e exibir a mensagem apropriada
+      function verificarHorario() {
+        var agora = new Date();
+        var horas = agora.getHours();
+
+        // Defina o horário limite como 10:00
+        var horarioLimite = 15;
+
+        // Verifique se é após as 10:00 e exiba a mensagem apropriada
+        if (horas >= horarioLimite) {
+          document.getElementById('conteudo').style.display = 'none';
+          document.getElementById('mensagem-indisponivel').style.display = 'block';
+        } else {
+          // Se não for após o horário limite, remova a classe "hidden"
+          document.getElementById('conteudo').classList.remove("hidden");
+          document.getElementById('mensagem-indisponivel').style.display = 'none';
+        }
+      }
+
+      // Chame a função ao carregar a página
+      window.onload = function() {
+        verificarHorario();
+      };
+    </script>
   </head>
   <body>
-    <header>
-      <h1>NOITE DE LUZES E CORES.</h1>
-      <img class="logo" src="img/Main Logo (1).png" alt="Logo 1">
-      <p><b>Faça sua reserva agora!</b></p>
-      <p><b>ATENÇÃO: ROLE A TELA PARA BAIXO E VEJA AS MESAS DISPONÍVEIS.</b></p>
-      <p><b>Valores das mesas: R$ 95,00 cada. Cadeiras Adicionais R$ 10,00 </b></p>
-    </header>
-    <main>
-      <form>
-        <div class="form-group">
-          <label for="nome_cliente">Nome do Responsável:</label>
-          <input type="text" id="nome_cliente" name="nome_cliente" required />
+    <!-- Conteúdo normal -->
+    <div id="conteudo" class="hidden">
+      <header>
+        <h1>NOITE DE LUZES E CORES.</h1>
+        <img class="logo" src="img/Main Logo (1).png" alt="Logo 1">
+        <p><b>Faça sua reserva agora!</b></p>
+        <p><b>ATENÇÃO: ROLE A TELA PARA BAIXO E VEJA AS MESAS DISPONÍVEIS.</b></p>
+        <p><b>Valores das mesas: R$ 95,00 cada. Cadeiras Adicionais R$ 10,00 </b></p>
+      </header>
+      <main>
+        <form>
+          <div class="form-group">
+            <label for="nome_cliente">Nome do Responsável:</label>
+            <input type="text" id="nome_cliente" name="nome_cliente" required />
+          </div>
+          <div class="form-group">
+            <label for="nome_aluno">Nome completo do aluno:</label>
+            <input type="text" id="nome_aluno" name="nome_aluno" required />
+          </div>
+          <div class="form-group">
+            <label for="turma_aluno">Ano e turma do Aluno:</label>
+            <input type="text" id="turma_aluno" name="turma_aluno" required />
+          </div>
+          <div class="form-group">
+            <label for="mesas">Número da mesa:</label>
+            <input type="number" id="mesas" name="mesas" min="1" required>
+          </div>
+          <div class="form-group">
+            <label for="mesaAdicional">Mesa Adicional:</label>
+            <p><b>Atenção: Se desejar, é possível reservar mais uma mesa, porém ela precisa estar disponível no mapa e localizada ao lado da mesa que você já reservou anteriormente.</b></p>
+            <input type="number" id="mesaAdicional" name="mesasAdicional" min="1" >
+          </div>
+          <div class="form-group">
+            <label for="cadeira">Deseja adicionar cadeira? (Responda com 0, 1 ou 2)</label>
+            <p><b>ATENÇÃO: Pode ser adicionado até duas cadeiras extras, responda 0 para nenhuma cadeira, 1 para uma cadeira ou 2 para duas cadeiras.</b></p>
+            <input type="number" id="cadeira" name="cadeira" min="0" max="2" required>
+          </div>
+          <button type="submit">Reservar</button>
+        </form>
+      </main>
+      <header>
+        <h2>Escolha suas mesas:</h2>
+        <div class="map-container">
+          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT_W9_agUYuQ37_5ElxTuOc0O3ZqIuG-N7SW-8bwHYsB0YhRKRGnU8aK7CJOPvIVg/embed?start=true&loop=false&delayms=60000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
         </div>
-        <div class="form-group">
-          <label for="nome_aluno">Nome completo do aluno:</label>
-          <input type="text" id="nome_aluno" name="nome_aluno" required />
-        </div>
-        <div class="form-group">
-          <label for="turma_aluno">Ano e turma do Aluno:</label>
-          <input type="text" id="turma_aluno" name="turma_aluno" required />
-        </div>
-        <div class="form-group">
-          <label for="mesas">Número da mesa:</label>
-          <input type="number" id="mesas" name="mesas" min="1" required>
-        </div>
-        </div>
-        <div class="form-group">
-          <label for="mesaAdicional">Mesa Adicional:</label>
-          <p><b>Atenção: Se desejar, é possível reservar mais uma mesa, porém ela precisa estar disponível no mapa e localizada ao lado da mesa que você já reservou anteriormente.</b></p>
-          <input type="number" id="mesaAdicional" name="mesasAdicional" min="1" >
-        </div>
-        </div>
+        <script src="script.js"></script>
+        <button onclick="topFunction()" id="myBtn" title="Voltar ao topo" class="floating-button">⇧</button>
+      </header>
+      <a href="https://linkwhats.app/f135dc" target="_blank" class="botao-ajuda">Ajuda</a>
+      <div id="ajuda" class="ajuda-fechada"></div>
+    </div>
 
-        <div class="form-group">
-          <label for="cadeira">Deseja adicionar cadeira? (Responda com 0, 1 ou 2)</label>
-          <p><b>ATENÇÃO: Pode ser adicionado até duas cadeiras extras, responda 0 para nenhuma cadeira, 1 para uma cadeira ou 2 para duas cadeiras.</b></p>
-          <input type="number" id="cadeira" name="cadeira" min="0" max="2" required>
-        </div>
-        <button type="submit">Reservar</button>
-      </form>
-    </main>
-    <header>
-      <h2>Escolha suas mesas:</h2>
-      <div class="map-container">
-        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT_W9_agUYuQ37_5ElxTuOc0O3ZqIuG-N7SW-8bwHYsB0YhRKRGnU8aK7CJOPvIVg/embed?start=true&loop=false&delayms=60000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-      </div>
-      <script src="script.js"></script>
-      <button onclick="topFunction()" id="myBtn" title="Voltar ao topo" class="floating-button">⇧</button>
-    </header>
-    <a href="https://linkwhats.app/f135dc" target="_blank" class="botao-ajuda">Ajuda</a>
-    <div id="ajuda" class="ajuda-fechada"></div>
+    <!-- Mensagem de serviço indisponível -->
+    <div id="mensagem-indisponivel" class="hidden">
+      <h1>Serviço Temporariamente Indisponível</h1>
+      <p>Pedimos desculpas, mas o serviço não está disponível no momento. Por favor, aguarde até o dia 20/11 às 7:00 para realizar reservas.</p>
+    </div>
+
+    <!-- Seu script e outros elementos no final da página ... -->
   </body>
 </html>
