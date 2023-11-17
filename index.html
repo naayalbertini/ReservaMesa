@@ -10,12 +10,16 @@
       function verificarHorario() {
         var agora = new Date();
         var horas = agora.getHours();
+        var minutos = agora.getMinutes();
 
-        // Defina o horário limite como 10:00
-        var horarioLimite = 15;
+        // Defina o horário limite como 15:30
+        var horarioLimite = 15 * 60 + 39; // Converter para minutos
 
-        // Verifique se é após as 10:00 e exiba a mensagem apropriada
-        if (horas >= horarioLimite) {
+        // Converta o horário atual para minutos
+        var horarioAtual = horas * 60 + minutos;
+
+        // Verifique se é após as 15:30 e exiba a mensagem apropriada
+        if (horarioAtual >= horarioLimite) {
           document.getElementById('conteudo').style.display = 'none';
           document.getElementById('mensagem-indisponivel').style.display = 'block';
         } else {
